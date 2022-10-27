@@ -85,15 +85,7 @@ public class ClientSslTest extends GridCommonAbstractTest {
 
         try (Ignite ignite = Ignition.start(createClusterNode())) {
             ClientConfiguration configuration = new ClientConfiguration()
-                .setAddresses(Config.SERVER)
-                .setSslMode(SslMode.REQUIRED)
-                .setSslClientCertificateKeyStorePath(GridTestUtils.keyStorePath("client"))
-                .setSslClientCertificateKeyStoreType(DFLT_STORE_TYPE)
-                .setSslClientCertificateKeyStorePassword("123456")
-                .setSslTrustCertificateKeyStorePath(GridTestUtils.keyStorePath("trustone"))
-                .setSslTrustCertificateKeyStoreType(DFLT_STORE_TYPE)
-                .setSslTrustCertificateKeyStorePassword("123456")
-                .setSslKeyAlgorithm(DFLT_KEY_ALGORITHM);
+                .setAddresses(Config.SERVER);
 
             client = Ignition.startClient(configuration);
             client.getOrCreateCache(cacheName);
