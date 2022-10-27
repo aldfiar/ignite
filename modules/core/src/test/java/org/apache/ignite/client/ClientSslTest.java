@@ -54,7 +54,7 @@ public class ClientSslTest extends GridCommonAbstractTest {
     }
 
     @Test
-    public void testThinClientWithEnabledSslConnectToSecurecGrid() throws Exception {
+    public void testThinClientWithEnabledSslConnectToSecuredGrid() throws Exception {
         IgniteClient client = null;
         String cacheName = "sslTestsCache";
 
@@ -78,7 +78,7 @@ public class ClientSslTest extends GridCommonAbstractTest {
     }
 
     @Test
-    public void testThinClientWithoutSSlConnectToSecurecGrid() throws Exception {
+    public void testThinClientWithoutSSlConnectToSecuredGrid() throws Exception {
         IgniteClient client = null;
         boolean isFailed = false;
         String cacheName = "sslTestsCache";
@@ -102,7 +102,7 @@ public class ClientSslTest extends GridCommonAbstractTest {
     }
 
     @Test
-    public void testThinClientWithEnabledSslConnectToNonSecurecGrid() throws Exception {
+    public void testThinClientWithEnabledSslConnectToNonSecuredGrid() throws Exception {
         IgniteClient client = null;
         boolean isFailed = false;
         String cacheName = "sslTestsCache";
